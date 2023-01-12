@@ -6,6 +6,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Programowanie_Zaawansowane_Projekt.Models;
 
 namespace Programowanie_Zaawansowane_Projekt
 {
@@ -21,6 +22,7 @@ namespace Programowanie_Zaawansowane_Projekt
                 .ConfigureWebHostDefaults(webBuilder =>
                 {
                     webBuilder.UseStartup<Startup>();
-                });
+                }
+        );
     }
 }
