@@ -1,0 +1,90 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{polski}
+\usepackage{classdiagram}
+
+\input{config.tex}
+
+
+\projectname{[Webowa Lista Zadań Zespołu]}
+\firstauthor{[Aleksandra Chmielewska]}
+\secondauthor{[Wojciech Domżalski]}
+\thirdauthor{[Eryk Dolajzer]}
+
+\begin{document}
+
+\makeheader
+
+\section{Tematyka projektu}
+{\small\it Projekt polega na stworzeniu narzędzia zdolnego do przechowywania aktualnych zadań dla zespołu lub osoby. Ma być maksymalnie prosty i funkcjonalny, umożliwiający szybkie zorientowanie się w aktywnych zadaniach.}
+
+\section{Diagram klas}
+\includegraphics[scale=0.50] {diagram.pdf}
+
+\section{Wymagania systemowe}
+\subsection{Wymagania funkcjonalne}
+\begin{enumerate}
+    \item Dodawanie Zadań
+    \item Usuwanie Zadań
+    \item Przeglądanie Zadań
+    \item Przechowywanie Zadań
+    \item Opisywanie Zadań
+    \item Numerowanie Zadań
+\end{enumerate}
+\subsection{Wymagania pozafunkcjonalne}
+\begin{enumerate}
+    \item Dostęp za pomoca przeglądarki
+    \item Prosty interfejs
+    \item Kolejność FIFO
+\end{enumerate}
+\section{Opis techniczny projektu}
+{\small\it 
+\begin{enumerate}
+    \item Realizacja za pomocą wzorca projektowego MVC
+    \item Realizacja za pomocą bibliotek natywnych ASP .NET 5.0
+    \item Realizacja na frameworku .NET 5.0
+    \item Realizacja z wykorzystaniem Bazy Danych MS.SQL
+    \item Interakcja z użytkownikiem za pomocą warstwy VIEW, z wykorzystaniem CSHTML
+\end{enumerate}
+\section{Potencjalne możliwe problemy i zagrożenia}
+{\small\it Projekt nie posiada błędów które są mozliwe do okreslenie na etapie planowania.}
+\section{Scenariusze testów}
+{\small\it Procedura Testowa}
+\begin{enumerate}
+    \item Uruchomienie
+    \item Wprowadzenie nowego zadania
+    \item Próba przekroczenia dostępnej pamięci dla kontenerów
+    \item Akceptacja Zadania
+    \item Edytowanie Zadania
+     \item   Próba przekroczenia dostępnej pamięci dla kontenerów
+     \item Akceptacja zadania
+     \item Sprawdzenie szczegółów zadania
+     \item Próba usunięcia zadania
+     \item Dodanie zadania
+     \item wyłączenie programu
+     \item Uruchomienie programu
+     \item Sprawdzenie istnienia zadania
+     \item Sprawdzenie poprawności zawartości zadania
+     \item koniec testów
+\end{enumerate}
+\pagebreak
+\section{Lista zmian w dokumencie}
+
+\begin{table}[h!]
+\centering
+ \begin{tabular}{|c c c |} 
+ \hline
+ Rewizja & Imię i nazwisko & Opis \\ [0.5ex] 
+ \hline\hline
+ 1 & Jacek Kuźmicz & Stworzenie szablonu dokumentu \\ 
+ 2 & Wojciech Frohmberg & Poprawki i wersja LaTeX  \\
+ 3 & Wojciech Domżalski & Opisanie ogólnych założeń \\
+ 4 & Eryk Dolajzer  &   Wymagania systemowe i funkcjonalne \\
+ 5 & Aleksandra Chmielewska & Scenariusze testów i Wymagania pozafunkcjonalne \\
+ 6 & Wojciech Domżalski & Diagram Klas i opis techniczny projektu \\
+ \hline
+ \end{tabular}
+\end{table}
+
+\end{document}
+

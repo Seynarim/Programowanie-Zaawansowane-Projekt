@@ -1,0 +1,33 @@
+
+\usepackage[a4paper, margin=1.5cm]{geometry}
+\usepackage{tikz}
+\usetikzlibrary{calc}
+\usepackage{pdfpages}
+
+\makeatletter
+\def\firstauthor#1{\gdef\@firstauthor{#1}}
+\def\@firstauthor{\@latex@warning@no@line{No \noexpand\firstauthor given}}
+\def\secondauthor#1{\gdef\@secondauthor{#1}}
+\def\@secondauthor{}
+\def\thirdauthor#1{\gdef\@thirdauthor{#1}}
+\def\@thirdauthor{}
+\def\projectname#1{\gdef\@projectname{#1}}
+\def\@projectname{\@latex@warning@no@line{No \noexpand\projectname given}}
+\newcommand\makeheader{%
+
+\begin{tikzpicture}
+    \node(IN){Imię i nazwisko};
+    \node(IN1) at ($(IN) + (0, -0.5)$) {\@firstauthor};
+    \node(IN2) at ($(IN1) + (0, -0.5)$) {\@secondauthor};
+    \node(IN3) at ($(IN2) + (0, -0.5)$) {\@thirdauthor};
+\end{tikzpicture}
+\vspace*{20pt}
+\begin{center}
+    \begin{tikzpicture}
+        \node(PN){\bf\LARGE\@projectname};
+        \node(DOK) at ($(PN) + (0, 1)$) {\Large DOKUMENTACJA TECHNICZNA PROJEKTU};
+        \node(PDM) at ($(PN) + (0, -1)$) {\Large Przedmiot: PROGRAMOWANIE ZAAWANSOWANE};
+    \end{tikzpicture}
+\end{center}
+}
+\makeatother
